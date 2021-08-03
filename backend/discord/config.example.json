@@ -1,0 +1,16 @@
+{
+  "bots": [
+    {
+      "id": 1,
+      "name": "Example Bot",
+      "token": "<bot-token-here>",
+      "commands": [
+        {
+          "event": "message",
+          "listener": "!command",
+          "response": "This is a command"
+        }
+      ]
+    }
+  ]
+}
