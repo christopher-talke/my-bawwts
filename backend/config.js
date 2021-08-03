@@ -28,7 +28,7 @@ async function upsertFile(name) {
 }
 
 async function setup() {
-  await upsertFile(`${__dirname}\\.temp\\settings.json`);
+  await upsertFile(`${__dirname}/.temp/settings.json`);
 }
 
 export default setup;

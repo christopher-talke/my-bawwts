@@ -6,14 +6,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 async function getSettings() {
-  const settings = JSON.parse(fs.readFileSync(`${__dirname}\\..\\..\\.temp\\settings.json`));
+  const settings = JSON.parse(fs.readFileSync(`${__dirname}/../../.temp/settings.json`));
   return settings;
 }
 
 async function changeSettings(setting, key, value) {
-  const settings = JSON.parse(await fs.readFileSync(`${__dirname}\\..\\..\\.temp\\settings.json`));
+  const settings = JSON.parse(await fs.readFileSync(`${__dirname}/../../.temp/settings.json`));
   settings[setting][key] = value;
-  await fs.writeFileSync(`${__dirname}\\..\\..\\.temp\\settings.json`, JSON.stringify(settings, null, 4));
+  await fs.writeFileSync(`${__dirname}/../../.temp/settings.json`, JSON.stringify(settings, null, 4));
   return settings;
 }
 
